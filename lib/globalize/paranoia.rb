@@ -5,8 +5,7 @@ Globalize::ActiveRecord::ActMacro.module_eval do
   def setup_translates_with_paranoia!(options)
     setup_translates_without_paranoia!(options)
 
-    if options[:paranoia]
-      # hard-coded for now
+    if options[:paranoia] && translation_class.attribute_names.include?('deleted_at')
       translation_class.send(:acts_as_paranoid)
     end
   end
