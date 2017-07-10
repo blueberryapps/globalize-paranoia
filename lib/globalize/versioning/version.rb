@@ -1,5 +1,5 @@
 module Globalize
-  module Versioning
-    VERSION = '0.2.0'
+  module Paranoia
+    VERSION = '0.1'
   end
 end
