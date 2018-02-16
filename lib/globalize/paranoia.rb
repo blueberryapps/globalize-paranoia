@@ -10,5 +10,6 @@ Globalize::ActiveRecord::ActMacro.module_eval do
     end
   end
 
-  alias_method_chain :setup_translates!, :paranoia
+  alias_method :setup_translates_without_paranoia!, :setup_translates!
+  alias_method :setup_translates!, :setup_translates_with_paranoia!
 end
